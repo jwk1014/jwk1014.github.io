@@ -1,0 +1,11 @@
+title: jwk1014's blog
+email: admin@devwon.com
+description: ""
+baseurl: ""
+url: ""
+github_username:  jwk1014
+
+theme: just-the-docs
+
+exclude:
+   - Gemfile.lock
