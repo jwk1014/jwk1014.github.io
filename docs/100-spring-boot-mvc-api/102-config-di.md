@@ -4,178 +4,69 @@ title: Config & Dependency Injection
 nav_order: 102
 parent: Spring Boot MVC API
 ---
+<br/>
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# [](#header)Config & Dependency Injection
 
-[Link to another page](another-page).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4 `with code not transformed`
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
+작성일자 : 2020.11.08  
 
 * * *
 
-### Here is an unordered list:
+프로젝트 생성 : [Spring Initializr](https://start.spring.io)  
+IDE : [Spring IntelliJ IDEA Community](https://www.jetbrains.com/idea/download)
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+* * *
 
-### And an ordered list:
+- 진행순서  
+1. **[Configuration](#1-configuration)**
+2. **[Dependency Injection](#2-dependency-injection)**
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+* * *  
 
-### And a nested list:
+### 1. [](#header)**Configuration**  
+<br/>  
+Configuration은
+Spring Boot 서버의 서버가 시작될 때 해야하는 설정들을 담당하는 모델입니다.
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+<img src="/assets/images/spring-boot-mvc-api-config-di-01-01.png" width="700" height="700"/>  
 
-### Nesting an ol in ul in an ol
+`@Configuration` 어노테이션을 사용하며
 
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
+주로
+1. Bean을 추가하여 Thread Safe한 모델 인스턴스 Singleton으로 생성 후 필요한 곳에 injection
+2. 특정 Configuration 클래스를 상속 후 설정함수 overriding
 
-### And a task list
+위 과정에 사용되며  
+`@Configuration`과 `@Bean`에 대한  
+좀 더 자세한 내용은 추후 다른 기능들을 다루면서  
+필요하게 될 때 코드예시로 학습하겠습니다.  
 
-- [ ] Hello, this is a TODO item
-- [ ] Hello, this is another TODO item
-- [x] Goodbye, this item is done
+* * *
 
-### Small image
+### 2. [](#header)**Dependency Injection**  
+<br/>  
 
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-#### Multiple description terms and values
-
-Term
-: Brief description of Term
-
-Longer Term
-: Longer description of Term,
-  possibly more than one line
-
-Term
-: First description of Term,
-  possibly more than one line
-
-: Second description of Term,
-  possibly more than one line
-
-Term1
-Term2
-: Single description of Term1 and Term2,
-  possibly more than one line
-
-Term1
-Term2
-: First description of Term1 and Term2,
-  possibly more than one line
-
-: Second description of Term1 and Term2,
-  possibly more than one line
+Spring Boot의  
+`@Bean`, `@Controller`, `@Service`, `@Repository`, `@Component`등과 같은  
+Component들은  
+Singleton으로 인스턴스가 관리되며 (코드가 **Thread Safe** 해야합니다.)  
+필요한 Component에게 `@Autowired` 또는 **생성자**로 주입(injection) 가능합니다.  
   
-### More code
+Spring Boot의 권장사항은  
+1. **Controller, Service**와 같은 곳에서는 **생성자**로 injection받고  
+2. **테스트 모델 코드**에서는 **@Autowired**로 injection하는 것으로 되어있습니다.  
+  
+Spring Boot에 기본 Bean중 하나인 ObjectMapper를  
+Service 코드에 injection하는 2가지 예시를 보여드리겠습니다.  
+  
+**생성자 injection 예시**  
+<img src="/assets/images/spring-boot-mvc-api-config-di-02-01.png" width="700" height="700"/>  
+  
+**@Autowired injection 예시**  
+<img src="/assets/images/spring-boot-mvc-api-config-di-02-02.png" width="700" height="700"/>  
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+* * *
+  
+[ < [Prev] Getting Started ](101-getting-started.html){: .btn .btn-blue .float-left }
 
-```
-The final element.
-```
+[ [Next] Controller Service Repository > ](103-controller-service-repo.html){: .btn .btn-green .float-right }
