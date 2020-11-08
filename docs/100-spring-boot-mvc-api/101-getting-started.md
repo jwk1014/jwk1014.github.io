@@ -21,7 +21,7 @@ IDE : [Spring IntelliJ IDEA Community](https://www.jetbrains.com/idea/download)
 1. **[IDE 다운로드 설치](#1-ide-다운로드-설치)**
 2. **[JDK 설치](#2-jdk-설치)**
 3. **[프로젝트 생성](#3-프로젝트-생성)**
-3. **[프로젝트 Open & Build & Run](#4-프로젝트-Open--Build--Run)**
+3. **[프로젝트 Open & Build & Run](#4-프로젝트-open--build--run)**
 
 * * *  
 
