@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mybatis (Mysql)
+#title: Mybatis (Mysql)
 nav_order: 107
 parent: Spring Boot MVC API
 ---

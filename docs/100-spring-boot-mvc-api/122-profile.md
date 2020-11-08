@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Profile
+#title: Profile
 nav_order: 122
 parent: Spring Boot MVC API
 ---

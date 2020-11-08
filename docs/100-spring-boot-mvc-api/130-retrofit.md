@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Retrofit (Rest API)
+#title: Retrofit (Rest API)
 nav_order: 130
 parent: Spring Boot MVC API
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Logging (JSON)
+#title: Logging (JSON)
 nav_order: 114
 parent: Spring Boot MVC API
 ---

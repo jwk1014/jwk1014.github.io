@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RestTemplate (Rest API)
+#title: RestTemplate (Rest API)
 nav_order: 116
 parent: Spring Boot MVC API
 ---

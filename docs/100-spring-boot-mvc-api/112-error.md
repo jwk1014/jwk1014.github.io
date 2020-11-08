@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Error (Response & Report)
+#title: Error (Response & Report)
 nav_order: 112
 parent: Spring Boot MVC API
 ---

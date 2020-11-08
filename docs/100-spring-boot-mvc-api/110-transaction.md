@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Transaction
+#title: Transaction
 nav_order: 110
 parent: Spring Boot MVC API
 ---

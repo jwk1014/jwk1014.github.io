@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vault
+#title: Vault
 nav_order: 125
 parent: Spring Boot MVC API
 ---

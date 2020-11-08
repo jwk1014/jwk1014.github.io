@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Redis
+#title: Redis
 nav_order: 127
 parent: Spring Boot MVC API
 ---

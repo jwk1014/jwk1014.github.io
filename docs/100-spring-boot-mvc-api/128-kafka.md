@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kafka (Producing, Consuming)
+#title: Kafka (Producing, Consuming)
 nav_order: 128
 parent: Spring Boot MVC API
 ---

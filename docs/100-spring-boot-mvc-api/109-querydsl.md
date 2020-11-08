@@ -1,6 +1,6 @@
 ---
 layout: default
-title: QueryDSL
+#title: QueryDSL
 nav_order: 109
 parent: Spring Boot MVC API
 ---

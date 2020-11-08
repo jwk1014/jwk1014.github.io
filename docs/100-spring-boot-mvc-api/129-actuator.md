@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Actuator
+#title: Actuator
 nav_order: 129
 parent: Spring Boot MVC API
 ---

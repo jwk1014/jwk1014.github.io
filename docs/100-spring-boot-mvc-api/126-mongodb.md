@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MongoDB
+#title: MongoDB
 nav_order: 126
 parent: Spring Boot MVC API
 ---
