@@ -1,7 +1,8 @@
 ---
 layout: default
-#title: Getting Started
-parent: Spring Cloud
+#title: Profile
+nav_order: 123
+parent: Spring Boot MVC API
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

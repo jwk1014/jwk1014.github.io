@@ -1,7 +1,8 @@
 ---
 layout: default
-#title: Getting Started
-parent: Spring Cloud
+#title: Async & Scheduled
+nav_order: 119
+parent: Spring Boot MVC API
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

@@ -1,7 +1,8 @@
 ---
 layout: default
-#title: Getting Started
-parent: Spring Cloud
+#title: Swagger
+nav_order: 124
+parent: Spring Boot MVC API
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

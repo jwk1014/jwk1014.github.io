@@ -82,6 +82,10 @@ AdoptOpenJDK (HotSpot)
 <br/>  
 이제 빌드하고 실행해보겠습니다.  
   
+<h3 id="4-프로젝트-open--build--run-boot-run">
+  <a href="#4-프로젝트-open--build--run-boot-run" class="anchor-heading" aria-labelledby="4-프로젝트-open--build--run-boot-run"></a>
+  <a href="#header"></a>
+</h3>
 IntelliJ IDEA Community 버전에서는  
 Add Configuration이 자동으로 되지 않아  
 Gradle에서 찾아서 실행하겠습니다.
@@ -106,4 +110,5 @@ Tasks > application > bootRun을 찾아 실행합니다.
 
 * * *
   
-[ [Next] Config & Dependency Injection > ](102-config-di.html){: .btn .btn-green .float-right }
+[ [Next] Maven & Gradle > ](102-maven-gradle.html){: .btn .btn-green .float-right }
+<br/>  
