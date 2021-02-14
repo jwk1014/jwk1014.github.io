@@ -8,10 +8,10 @@ ADD Gemfile ./Gemfile
 RUN touch ./Gemfile.lock
 RUN chmod a+w ./Gemfile.lock
 RUN bundle install
-ADD _config.yml ./_config.yml
+ADD _config_local.yml ./_config.yml
 ADD favicon.ico ./favicon.ico
 ADD index.md ./index.md
-ADD assets ./assets
+ADD assets/images ./assets/images
 ENTRYPOINT ["jekyll", "serve"]
 
 # docker build -t blog .
