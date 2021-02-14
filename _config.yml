@@ -5,6 +5,3 @@ baseurl: ""
 github_username:  jwk1014
 
 remote_theme: pmarsceill/just-the-docs
-
-exclude:
-   - Gemfile.lock
